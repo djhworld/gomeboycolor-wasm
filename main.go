@@ -9,11 +9,11 @@ import (
 	"syscall/js"
 	"time"
 
+	"github.com/djhworld/gomeboycolor-wasm/webworker"
 	"github.com/djhworld/gomeboycolor/cartridge"
 	"github.com/djhworld/gomeboycolor/config"
 	"github.com/djhworld/gomeboycolor/gbc"
 	"github.com/djhworld/gomeboycolor/saves"
-	"github.com/djhworld/gomeboycolor-wasm/webworker"
 )
 
 const TITLE string = "gomeboycolor"
@@ -34,8 +34,8 @@ func main() {
 		emulatorSetup.saveStore,
 		emulatorSetup.config,
 		NewWebIO(
-			emulatorSetup.config.FrameRateLock, 
-			emulatorSetup.config.Headless, 
+			emulatorSetup.config.FrameRateLock,
+			emulatorSetup.config.Headless,
 			emulatorSetup.config.DisplayFPS,
 		),
 	)

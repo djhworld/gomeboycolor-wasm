@@ -8,9 +8,9 @@ import (
 
 	"syscall/js"
 
-	"github.com/djhworld/gomeboycolor/types"
-	"github.com/djhworld/gomeboycolor/inputoutput"
 	"github.com/djhworld/gomeboycolor-wasm/webworker"
+	"github.com/djhworld/gomeboycolor/inputoutput"
+	"github.com/djhworld/gomeboycolor/types"
 )
 
 const (
