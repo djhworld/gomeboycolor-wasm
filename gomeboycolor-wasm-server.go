@@ -1,4 +1,5 @@
 // +build !wasm
+//go:generate statik -src=static/gomeboycolor
 
 package main
 
