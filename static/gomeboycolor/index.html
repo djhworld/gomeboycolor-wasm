@@ -35,7 +35,7 @@
 			padding: 0px;
 			width: 800px;
 			height: 510px;
-			margin-top: 40px;
+			margin-top: 15px;
 
 		}
 
@@ -345,6 +345,7 @@
 			var context = canvas.getContext("2d");
 			var ROM_NAME = null;
 			var ROM_DATA = "";
+			var fileSelectHandler = handleFileSelect(run);
 
 			function run(romName, romData) {
 				stop();
@@ -501,6 +502,9 @@
 				context.clearRect(0, 0, canvas.width, canvas.height);
 				context.fillStyle = "#bfc5ab";
 				context.fillRect(canvas.width / 4, 4, 160, 144);
+
+				document.getElementById('files').removeEventListener('change', fileSelectHandler, false);
+				document.getElementById('files').addEventListener('change', fileSelectHandler, false);
 			}
 
 			function stop() {
@@ -520,7 +524,6 @@
 			}
 
 			reset();
-			document.getElementById('files').addEventListener('change', handleFileSelect(run), false);
 		</script>
 	</div>
 </body>
