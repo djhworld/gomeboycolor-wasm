@@ -22,6 +22,8 @@ const (
 	JsKeyX     = 88
 	JsKeyA     = 65
 	JsKeyS     = 83
+	ALPHA_FULL = 255
+	FOUR       = 4
 )
 
 var DefaultControlScheme inputoutput.ControlScheme = inputoutput.ControlScheme{
@@ -95,7 +97,6 @@ type html5CanvasDisplay struct {
 	headless  bool
 }
 
-//TODO on close handler?
 func (s *html5CanvasDisplay) init(title string, headless bool) error {
 	s.Name = inputoutput.PREFIX + "-SCREEN"
 	log.Printf("%s: Initialising display", s.Name)
@@ -120,8 +121,8 @@ func (s *html5CanvasDisplay) DrawFrame(screenData *types.Screen) {
 			s.imageData[i] = pixel.Red
 			s.imageData[i+1] = pixel.Green
 			s.imageData[i+2] = pixel.Blue
-			s.imageData[i+3] = 255
-			i += 4
+			s.imageData[i+3] = ALPHA_FULL
+			i += FOUR
 		}
 	}
 

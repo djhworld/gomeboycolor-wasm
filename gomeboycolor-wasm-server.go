@@ -9,16 +9,21 @@ import (
 	"github.com/rakyll/statik/fs"
 	"log"
 	"net/http"
+	"flag"
 )
 
+var port *int = flag.Int("p", 8080, "the port to run the server on")
+
 func main() {
+	flag.Parse() 
+
 	statikFS, err := fs.New()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	http.Handle("/", http.StripPrefix("/", http.FileServer(statikFS)))
-	fmt.Println("Open your web browser and navigate to: http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	fmt.Printf("Open your web browser and navigate to: http://localhost:%d\n", *port)
+	http.ListenAndServe(fmt.Sprintf(":%d", *port), nil)
 
 }

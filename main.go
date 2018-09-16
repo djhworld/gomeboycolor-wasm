@@ -20,7 +20,7 @@ const TITLE string = "gomeboycolor"
 
 func main() {
 	fmt.Printf("%s.\n", TITLE)
-	fmt.Println("Copyright (c) 2018. Daniel James Harper.")
+	fmt.Println("Copyright (c) 2013-2018. Daniel James Harper.")
 	fmt.Println("http://djhworld.github.io/gomeboycolor")
 	fmt.Println(strings.Repeat("*", 120))
 
