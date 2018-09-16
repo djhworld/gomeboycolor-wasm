@@ -4,18 +4,18 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	_ "github.com/djhworld/gomeboycolor-wasm/statik"
 	"github.com/rakyll/statik/fs"
 	"log"
 	"net/http"
-	"flag"
 )
 
 var port *int = flag.Int("p", 8080, "the port to run the server on")
 
 func main() {
-	flag.Parse() 
+	flag.Parse()
 
 	statikFS, err := fs.New()
 	if err != nil {
