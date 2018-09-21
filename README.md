@@ -6,7 +6,10 @@ Nintendo Gameboy Color emulator, this is my first emulator so I'm learning as I 
 
 This repository is the frontend for running the emulator in a browser, by compiling it to WebAssembly. The backend that implements the emulator can be found in: [djhworld/gomeboycolor](https://github.com/djhworld/gomeboycolor)
 
-You are welcome to visit the github page for this project by [clicking here](http://djhworld.github.io/gomeboycolor), this includes links to [executables](http://djhworld.github.io/gomeboycolor/#downloads), [documentation](http://djhworld.github.io/gomeboycolor/#documentation) and some [background about the project](http://djhworld.github.io/gomeboycolor/#about).
+
+![mario tennis](https://github.com/djhworld/gomeboycolor-wasm/raw/master/mariotennis.png)
+
+You are welcome to visit the github page for this project by [clicking here](http://djhworld.github.io/gomeboycolor)
 
 FAQ
 ============================
@@ -76,7 +79,7 @@ SOFTWARE.
 Progress
 ---------------------------
 
-![mario tennis](https://github.com/djhworld/gomeboycolor-glfw/raw/master/mariotennis.png)
-![pokemon](https://github.com/djhworld/gomeboycolor-glfw/raw/master/pokemon.png)
-![tetrisdx](https://github.com/djhworld/gomeboycolor-glfw/raw/master/tetrisdx.png)
-![zelda](https://github.com/djhworld/gomeboycolor-glfw/raw/master/zelda.png)
+![mario tennis](https://github.com/djhworld/gomeboycolor-wasm/raw/master/mariotennis.png)
+![pokemon](https://github.com/djhworld/gomeboycolor-wasm/raw/master/pokemon.png)
+![tetrisdx](https://github.com/djhworld/gomeboycolor-wasm/raw/master/tetrisdx.png)
+![zelda](https://github.com/djhworld/gomeboycolor-wasm/raw/master/zelda.png)
