@@ -6,6 +6,7 @@ Nintendo Gameboy Color emulator, this is my first emulator so I'm learning as I 
 
 This repository is the frontend for running the emulator in a browser, by compiling it to WebAssembly. The backend that implements the emulator can be found in: [djhworld/gomeboycolor](https://github.com/djhworld/gomeboycolor)
 
+A blog post about this version can be found here https://djhworld.github.io/post/2018/09/21/i-ported-my-gameboy-color-emulator-to-webassembly/
 
 ![mario tennis](https://github.com/djhworld/gomeboycolor-wasm/raw/master/images/mariotennis.png)
 
