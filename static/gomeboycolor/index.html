@@ -320,8 +320,7 @@
 					"headless": document.getElementById("headless").checked,
 					"colorMode": document.getElementById("colorMode").checked,
 					"showFps": document.getElementById("showFps").checked,
-					"skipBoot": document.getElementById("skipBoot").checked,
-					"fpsLock": parseInt(document.getElementById("fpsLock").options[document.getElementById("fpsLock").selectedIndex].value)
+					"skipBoot": document.getElementById("skipBoot").checked
 				}));
 			}
 
@@ -333,7 +332,6 @@
 					document.getElementById("colorMode").checked = config.colorMode;
 					document.getElementById("showFps").checked = config.showFps;
 					document.getElementById("skipBoot").checked = config.skipBoot;
-					document.getElementById("fpsLock").value = config.fpsLock;
 				}
 			}
 			loadSettings();
