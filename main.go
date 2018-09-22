@@ -34,6 +34,7 @@ func main() {
 		emulatorSetup.saveStore,
 		emulatorSetup.config,
 		NewWebIO(
+			emulatorSetup.config.FrameRateLock,
 			emulatorSetup.config.Headless,
 			emulatorSetup.config.DisplayFPS,
 		),
@@ -44,7 +45,7 @@ func main() {
 	}
 
 	//Starts emulator code
-	go emulator.Run(emulatorSetup.config.FrameRateLock)
+	go emulator.Run()
 
 	//set the IO controller to run indefinitely (it waits for screen updates)
 	emulator.RunIO()

@@ -42,7 +42,7 @@ type WebIO struct {
 	html5Display *html5CanvasDisplay
 }
 
-func NewWebIO(headless bool, displayFps bool) *WebIO {
+func NewWebIO(frameRateLock int64, headless bool, displayFps bool) *WebIO {
 	log.Println("Creating Web based IO Handler")
 	html5Display := new(html5CanvasDisplay)
 
@@ -54,7 +54,7 @@ func NewWebIO(headless bool, displayFps bool) *WebIO {
 	}
 
 	return &WebIO{
-		inputoutput.NewCoreIO(headless, frameRateReporter, html5Display),
+		inputoutput.NewCoreIO(frameRateLock, headless, frameRateReporter, html5Display),
 		html5Display,
 	}
 }
