@@ -470,8 +470,7 @@
 			}
 
 			function updateCanvas(screenData) {
-				var decodedData = new Uint8ClampedArray(screenData);
-				var imageData = new ImageData(decodedData, 160, 144);
+				var imageData = new ImageData(screenData, 160, 144);
 				context.putImageData(imageData, canvas.width / 4, 4);
 			}
 

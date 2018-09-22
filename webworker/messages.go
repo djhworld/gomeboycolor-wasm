@@ -35,8 +35,13 @@ func SendSaveState(gameId, state string) {
 	postMessage("save-state", []interface{}{gameId, state})
 }
 
-func SendScreenUpdate(screenData string) {
-	js.Global().Call("sendScreenUpdate", screenData)
+func SendScreenUpdate(screenData []uint8) {
+	typedArray := js.TypedArrayOf(screenData)
+	defer typedArray.Release()
+
+	clamped := js.Global().Get("Uint8ClampedArray").New(typedArray)
+	transferable := js.Global().Get("Array").New(clamped).Get("buffer")
+	js.Global().Call("postMessage", []interface{}{"screen-update", clamped}, transferable)
 }
 
 func SendFrameRate(rate float32) {

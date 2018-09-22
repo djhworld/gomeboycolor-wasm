@@ -3,7 +3,6 @@
 package main
 
 import (
-	"encoding/base64"
 	"log"
 
 	"syscall/js"
@@ -128,6 +127,6 @@ func (s *html5CanvasDisplay) DrawFrame(screenData *types.Screen) {
 
 	// TODO this is probably a performance bottleneck
 	if !s.headless {
-		webworker.SendScreenUpdate(base64.StdEncoding.EncodeToString(s.imageData))
+		webworker.SendScreenUpdate(s.imageData)
 	}
 }
