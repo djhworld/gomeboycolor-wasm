@@ -308,11 +308,10 @@
 
 
 		<script type="text/javascript">
+			document.getElementById("fpsLock").value = 59;
 			if (navigator.userAgent.includes("Chrome/")) {
-				document.getElementById("fpsLock").value = 25;
 				document.getElementById("chrome-warning").classList.remove("hidden");
 			} else {
-				document.getElementById("fpsLock").value = 35;
 				document.getElementById("chrome-warning").classList.add("hidden");
 			}
 
