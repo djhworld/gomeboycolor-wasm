@@ -125,7 +125,6 @@ func (s *html5CanvasDisplay) DrawFrame(screenData *types.Screen) {
 		}
 	}
 
-	// TODO this is probably a performance bottleneck
 	if !s.headless {
 		webworker.SendScreenUpdate(s.imageData)
 	}

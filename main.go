@@ -44,8 +44,15 @@ func main() {
 		log.Fatal(err)
 	}
 
+	frameRunnerWrapper := func(doFrame func()) {
+		js.Global().Call("setTimeout", js.NewCallback(func(args []js.Value) {
+			doFrame()
+		}), 0)
+		time.Sleep(1 * time.Millisecond)
+	}
+
 	//Starts emulator code
-	go emulator.Run()
+	go emulator.Run(frameRunnerWrapper)
 
 	//set the IO controller to run indefinitely (it waits for screen updates)
 	emulator.RunIO()
