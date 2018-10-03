@@ -18,8 +18,11 @@ import (
 
 const TITLE string = "gomeboycolor"
 
+var BUILD_DATE string
+
 func main() {
-	fmt.Printf("%s.\n", TITLE)
+	fmt.Printf("%s\n", TITLE)
+	fmt.Printf("Built on: %s\n", BUILD_DATE)
 	fmt.Println("Copyright (c) 2013-2018. Daniel James Harper.")
 	fmt.Println("http://djhworld.github.io/gomeboycolor")
 	fmt.Println(strings.Repeat("*", 120))
